@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/main_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fill in Patient Detail's"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <AutoCompleteTextView
+                android:id="@+id/hospital_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Hospital Name"
+                >
+
+            </AutoCompleteTextView>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/patient_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Patient Name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Patient Age" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textSize="16dp"
+                />
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:onClick="getGender"
+                    />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:onClick="getGender"
+                    />
+
+                <RadioButton
+                    android:id="@+id/other"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:onClick="getGender"
+                    />
+            </RadioGroup>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Blood Group"
+                />
+
+            <Spinner
+                android:id="@+id/blood_group"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                >
+
+            </Spinner>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/disease"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="Disease if any ?" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Description"
+                android:inputType="textMultiLine" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Symptoms"
+                android:textSize="16dp"
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <CheckBox
+                    android:id="@+id/bp"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:text="BP"
+                    android:onClick="getSymptoms1"
+                    />
+
+                <CheckBox
+                    android:id="@+id/diabetes"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Diabetes"
+                    android:onClick="getSymptoms2"
+                    />
+
+                <CheckBox
+                    android:id="@+id/thyroid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Thyroid"
+                    android:onClick="getSymptoms3"
+                    />
+
+                <CheckBox
+                    android:id="@+id/allergy"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Allergy"
+                    android:onClick="getSymptoms4"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/breathingproblem"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Breathing Problems"
+                    android:onClick="getSymptoms5"
+                    />
+
+
+
+                <CheckBox
+                    android:id="@+id/pasts"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Past Surgery"
+                    android:onClick="getSymptoms6"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/pregnancy"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pregnancy"
+                    android:onClick="getSymptoms7"
+                    />
+            </LinearLayout>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+
+            <EditText android:id="@+id/arrivaltime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:hint="Estimated Arrival Time" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:text="Send"
+            android:background="@color/colorRed"
+            />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/iv"
+            />
+
+    </LinearLayout>
+</ScrollView>

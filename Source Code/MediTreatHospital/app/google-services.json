@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "538903324353",
+    "firebase_url": "https://meditreathospital.firebaseio.com",
+    "project_id": "meditreathospital",
+    "storage_bucket": "meditreathospital.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538903324353:android:399c5a7e242a721f",
+        "android_client_info": {
+          "package_name": "com.example.meditreat_hospital"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538903324353-ai9imk0ftnvp3gjvhgtf1pp9udhupfph.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.meditreat_hospital",
+            "certificate_hash": "95cedb38cb04e8a7bbc34e2b84d67fc544a25976"
+          }
+        },
+        {
+          "client_id": "538903324353-en9nr94kcr23t5bpkfe7j63qsbqmmo15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwVSjcCF8Vq_sk8_L1ZCX_gerbBOi-Rfk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538903324353-en9nr94kcr23t5bpkfe7j63qsbqmmo15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
